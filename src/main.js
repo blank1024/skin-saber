@@ -4,7 +4,10 @@ import router from './router'
 import store from './store'
 import '@/api/index';   // 导入API
 
-Vue.config.productionTip = false
+import "@/assets/sass/common.scss";
+import "@/assets/sass/reset.scss";
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
