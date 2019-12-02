@@ -1,4 +1,4 @@
-# vue-cli3-template
+# skin saber
 
 ## Project setup
 ```
