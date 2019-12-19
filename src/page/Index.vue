@@ -3,7 +3,7 @@
  * @since: 2019-11-24 21:37:34
  * @Author: jawnwa22
  * @LastEditors: jawnwa22
- * @LastEditTime: 2019-12-02 23:19:27
+ * @LastEditTime: 2019-12-04 00:10:00
  -->
 <template lang="pug">
     div.v-application
@@ -32,11 +32,9 @@ export default {
         SideBar
     },
     data() {
-        return {
-
-        }
+        return {};
     }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -49,21 +47,22 @@ export default {
     .v-content {
         flex: 1 0 auto;
         margin: 0 0 216px;
-        .v-content__wrap {
-            padding: 0px;
-            margin: 48px auto 0;
-            max-width: 1280px;
-            .container-fluid {
-                display: flex;
-                .container-left {
-                    flex: auto;
-                }
-                .container-right {
-                    flex: 0 0 340px;
-                    padding: 0 16px;
-                    margin-left: 30px;
-                }
-            }
+    }
+    .v-content__wrap {
+        padding: 0px;
+        margin: 48px auto 0;
+        max-width: 1280px;
+    }
+    .container-fluid {
+        display: flex;
+        .container-left {
+            flex: auto;
+            padding: 0 16px;
+        }
+        .container-right {
+            flex: 0 0 340px;
+            padding: 0 16px;
+            margin-left: 30px;
         }
     }
     .v-footer {
@@ -72,6 +71,5 @@ export default {
         left: 0;
         right: 0;
     }
-    
 }
 </style>

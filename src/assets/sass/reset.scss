@@ -11,3 +11,12 @@ html {
     padding: 0;
     margin: 0;
 }
+
+a {
+    color: inherit;
+    outline: 0;
+    text-decoration: none;
+    &:hover {
+        color: #d6555f !important;
+    }
+}
