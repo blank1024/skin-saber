@@ -3,7 +3,7 @@
  * @since: 2019-11-24 18:11:22
  * @Author: jawnwa22
  * @LastEditors: jawnwa22
- * @LastEditTime: 2019-11-24 18:15:30
+ * @LastEditTime: 2019-12-30 15:13:49
  */
 
 module.exports = {
@@ -16,5 +16,10 @@ module.exports = {
                 prependData: `@import "@/assets/sass/base_core.scss";`
             }
         }
+    },
+    configureWebpack: {
+        externals: {
+            'highlight.js': 'hljs'
+        },
     }
 };

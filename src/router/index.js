@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home/Home.vue";
 import Index from "@/page/Index.vue";
-
+import Article from "@/views/Article";
 Vue.use(VueRouter);
 
 const routes = [
@@ -14,6 +14,11 @@ const routes = [
                 path: "",
                 component: Home,
 
+            },
+            {
+                path: "/article/:id",
+                component: Article,
+                props: true
             }
         ]
     },

@@ -8,6 +8,9 @@ const article = {
                 page_size
             }
         })
+    },
+    getArticle(id) {
+        return axios.get(`/article/${id}`);
     }
 }
 

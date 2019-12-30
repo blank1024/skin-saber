@@ -10,34 +10,40 @@
                     span.tags
                         router-link(to="/" v-for="tag in item.tag" :key="tag._id") {{ tag.name }}
                 div.article__info--right
-                    span.createTime {{ item.createdAt }}
+                    //- span.createTime {{ item.createdAt | formatTime }}
+                    span.create-time {{ item.createdAt | parseTime( '{y}-{m}-{d} {h}:{i}') }}
             div.article__intro
                 div.title
-                    router-link(to="/") {{ item.title }}
+                    router-link(:to="{path:`/article/${item.id}`}") {{ item.title }}
                 div.abstract(v-html="item.content")
             div.article__visit
                 div.spacer
-                router-link(to="/") 阅读全文
+                router-link(:to="{path:`/article/${item.id}`}") 阅读全文
 
 </template>
 
 <script>
-import { log } from 'util';
+import { parseTime } from "@/utils";
+import { formatTime } from "@/utils";
 export default {
+    props: {
+        article_list: {
+            type: Array,
+            default: () => []
+        }
+    },
     components: {},
     data() {
         return {
-            article_list: []
+            // article_list: []
         }
     },
     mounted() {
-        this.getArticleList();
+       
     },
     methods: {
-        getArticleList() {
-            this.$api.article.getArticleList().then( res => {
-                this.article_list = res.result;
-            })
+         jumpToArticle(id) {
+            this.$router.push(`/article/${id}`);
         }
     }
 };
@@ -48,6 +54,11 @@ export default {
     padding-bottom: 48px;
     border-bottom: 1px solid #e5e5e5;
 }
+
+.article + .article {
+    margin-top: 48px;
+}
+
 .article__info {
     display: flex;
     justify-content: space-between;

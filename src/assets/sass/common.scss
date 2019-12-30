@@ -1,3 +1,30 @@
 .spacer {
     flex-grow: 1 !important;
 }
+
+.article__content {
+    h1 {
+        padding-bottom: 0.3em;
+        font-size: 1.7em;
+        border-bottom: 1px solid #eee;
+        margin-top: 24px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    p {
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        padding-bottom: 0.3em;
+        font-size: 1.5em;
+        border-bottom: 1px solid #eee;
+        margin-top: 24px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+}

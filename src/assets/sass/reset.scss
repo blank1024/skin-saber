@@ -20,3 +20,13 @@ a {
         color: #d6555f !important;
     }
 }
+
+pre {
+    margin-bottom: 1em;
+    code {
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: normal;
+        // font-family: Consolas, Monaco;
+    }
+}

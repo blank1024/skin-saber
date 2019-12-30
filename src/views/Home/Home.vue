@@ -2,17 +2,17 @@
  * @description: 博客首页
  * @since: 2019-11-24 20:44:51
  * @Author: jawnwa22
- * @LastEditors: jawnwa22
- * @LastEditTime: 2019-12-03 23:50:54
+ * @LastEditors  : jawnwa22
+ * @LastEditTime : 2019-12-19 19:43:45
  -->
 
 <template lang="pug">
     div.home-page
-        ArticleEnter
+        ArticleEnter(:article_list="article_list")
         div.pagination
-            router-link.pagination__item.pagination--left(to="/") Prev
+            router-link.pagination__item.pagination--left(to="/" v-if="showPre") Prev
             div.spacer
-            router-link.pagination__item.pagination--right(to="/") Next
+            router-link.pagination__item.pagination--right(to="/" v-if="showNext") Next
 </template>
 
 <script>
@@ -22,7 +22,33 @@ export default {
         ArticleEnter
     },
     data() {
-        return {};
+        return {
+            article_list: [],
+            total: 0,
+            page_size: 0,
+            page_num: 0
+        };
+    }, 
+    mounted() {
+        this.getArticleList();
+    },
+    methods: {
+        getArticleList() {
+            this.$api.article.getArticleList().then( res => {
+                this.article_list = res.result;
+                this.total = res.total;
+                this.page_size = res.page_size;
+                this.page_num = res.page_num;
+            })
+        }
+    },
+    computed: {
+        showNext() {
+            return this.page_num * this.page_size < this.total;
+        },
+        showPre() {
+            return this.page_num > 1;
+        }
     }
 };
 </script>
