@@ -2,8 +2,8 @@
  * @description: 页面的主体
  * @since: 2019-11-24 21:37:34
  * @Author: jawnwa22
- * @LastEditors: jawnwa22
- * @LastEditTime: 2019-12-04 00:10:00
+ * @LastEditors  : jawnwa22
+ * @LastEditTime : 2020-01-14 23:22:08
  -->
 <template lang="pug">
     div.v-application
@@ -56,7 +56,7 @@ export default {
     .container-fluid {
         display: flex;
         .container-left {
-            flex: auto;
+            flex: 1 1 auto;
             padding: 0 16px;
         }
         .container-right {
