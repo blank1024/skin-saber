@@ -1,11 +1,11 @@
 <template lang="pug">
     nav.navbar
         div.navbar_container.navbar_container_web
-            a.brand Jawnwa's blog
+            router-link(to="/").brand Jawnwa's blog
             div.nav-list
                 ul
                     li(v-for="(item, index) in nav" :key="index")
-                        router-link(to="item.to") {{ item.title }}
+                        router-link(:to="item.to") {{ item.title }}
 </template>
 
 <script>

@@ -3,7 +3,7 @@
  * @since: 2019-11-24 21:37:34
  * @Author: jawnwa22
  * @LastEditors  : jawnwa22
- * @LastEditTime : 2020-01-14 23:22:08
+ * @LastEditTime : 2020-01-15 23:52:02
  -->
 <template lang="pug">
     div.v-application
@@ -23,7 +23,7 @@
 import Navbar from "@/components/Navbar.vue";
 import HeaderBanner from "@/components/Header.vue";
 import VFooter from "@/components/Footer.vue";
-import SideBar from "@/components/Sidebar.vue";
+import SideBar from "@/components/Sidebar/index.vue";
 export default {
     components: {
         Navbar,
