@@ -3,7 +3,7 @@
  * @since: 2019-11-24 21:37:34
  * @Author: jawnwa22
  * @LastEditors  : jawnwa22
- * @LastEditTime : 2020-01-15 23:52:02
+ * @LastEditTime : 2020-02-09 23:27:15
  -->
 <template lang="pug">
     div.v-application
@@ -70,6 +70,18 @@ export default {
         bottom: 0;
         left: 0;
         right: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .v-application {
+        .container-fluid {
+            flex-direction: column;
+            .container-right {
+                margin-left: 0;
+                margin-top: 24px;
+            }
+        }
     }
 }
 </style>

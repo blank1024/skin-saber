@@ -8,6 +8,7 @@ import * as filters from "@/filters";
 
 import "@/assets/sass/common.scss";
 import "@/assets/sass/reset.scss";
+import "@/assets/sass/index.scss";
 
 Vue.config.productionTip = false;
 

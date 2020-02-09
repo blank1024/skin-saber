@@ -25,7 +25,6 @@ export default {
 <style lang="scss" scoped>
 .sidebar_container {
     flex: 0 0 340px;
-    margin-left: 30px;
     &:not(:first-child) {
         .header {
             padding-top: 40px;
