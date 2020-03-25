@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home/Home.vue";
-import Index from "@/page/Index.vue";
-import Article from "@/views/Article";
+import Home from "../views/home";
+import Index from "@/layout/index.vue";
+import Article from "@/views/article";
+import Tag from '@/views/tag';
 Vue.use(VueRouter);
 
 const routes = [
@@ -18,6 +19,11 @@ const routes = [
             {
                 path: "/article/:id",
                 component: Article,
+                props: true
+            },
+            {
+                path: '/tags/:name',
+                component: Tag,
                 props: true
             }
         ]

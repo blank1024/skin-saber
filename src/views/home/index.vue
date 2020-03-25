@@ -2,8 +2,8 @@
  * @description: 博客首页
  * @since: 2019-11-24 20:44:51
  * @Author: jawnwa22
- * @LastEditors  : jawnwa22
- * @LastEditTime : 2019-12-19 19:43:45
+ * @LastEditors: jawnwa22
+ * @LastEditTime: 2020-03-25 11:00:20
  -->
 
 <template lang="pug">
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import ArticleEnter from "./components/ArticleEnter.vue";
+import ArticleEnter from "@/components/article-enter";
 export default {
     components: {
         ArticleEnter
