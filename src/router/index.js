@@ -1,9 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/home";
+import Home from "@/views/home/index.vue";
 import Index from "@/layout/index.vue";
-import Article from "@/views/article";
-import Tag from '@/views/tag';
+import Article from "@/views/article/index.vue";
+import Tag from "@/views/tag/index.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -13,8 +14,7 @@ const routes = [
         children: [
             {
                 path: "",
-                component: Home,
-
+                component: Home
             },
             {
                 path: "/article/:id",
@@ -22,7 +22,7 @@ const routes = [
                 props: true
             },
             {
-                path: '/tags/:name',
+                path: "/tags/:name",
                 component: Tag,
                 props: true
             }
