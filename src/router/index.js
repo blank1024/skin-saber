@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "@/views/home/index.vue";
 import Index from "@/layout/index.vue";
 import Tag from "@/views/tag/index.vue";
-import Article from "@/views/article/index";
+import Blog from "@/views/blog/index";
 
 Vue.use(VueRouter);
 
@@ -18,7 +18,7 @@ const routes = [
             },
             {
                 path: "/article/:id",
-                component: Article,
+                component: Blog,
                 props: true
             },
             {
