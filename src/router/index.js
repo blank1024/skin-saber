@@ -2,8 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/views/home/index.vue";
 import Index from "@/layout/index.vue";
-import Article from "@/views/article/index.vue";
 import Tag from "@/views/tag/index.vue";
+import Article from "@/views/article/index";
 
 Vue.use(VueRouter);
 
