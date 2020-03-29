@@ -18,8 +18,8 @@ export default {
                     to: "/"
                 },
                 {
-                    title: "标签",
-                    to: "/tag"
+                    title: "标签墙",
+                    to: "/tags"
                 },
                 {
                     title: "存档",

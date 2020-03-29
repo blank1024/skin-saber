@@ -4,6 +4,7 @@ import Home from "@/views/home/index.vue";
 import Index from "@/layout/index.vue";
 import Tag from "@/views/tag/index.vue";
 import Blog from "@/views/blog/index";
+import Tags from '@/views/tags/index.vue';
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,10 @@ const routes = [
                 path: "/tags/:name",
                 component: Tag,
                 props: true
+            },
+            {
+                path: '/tags',
+                component: Tags
             }
         ]
     },
