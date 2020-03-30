@@ -1,11 +1,10 @@
 <template lang="pug">
     side-item(title="标签")
         div.tags
-            router-link(
+            router-link.item(
                 v-for="tag in tag_list"
                 :key="tag._id"
                 :to="`/tags/${tag.name}`"
-                class="item"
             ) {{ tag.name }}
 </template>
 

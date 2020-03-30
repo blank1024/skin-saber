@@ -11,6 +11,9 @@ const article = {
     },
     getArticle(id) {
         return axios.get(`/article/${id}`);
+    },
+    getArchive() {
+        return axios.get('/article/archive');
     }
 }
 

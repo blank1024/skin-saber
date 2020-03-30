@@ -3,8 +3,9 @@ import VueRouter from "vue-router";
 import Home from "@/views/home/index.vue";
 import Index from "@/layout/index.vue";
 import Tag from "@/views/tag/index.vue";
-import Blog from "@/views/blog/index";
-import Tags from '@/views/tags/index.vue';
+import Blog from "@/views/blog/index.vue";
+import Tags from "@/views/tags/index.vue";
+import Archives from "@/views/archive/index.vue";
 
 Vue.use(VueRouter);
 
@@ -28,8 +29,12 @@ const routes = [
                 props: true
             },
             {
-                path: '/tags',
+                path: "/tags",
                 component: Tags
+            },
+            {
+                path: "/archives",
+                component: Archives
             }
         ]
     },
