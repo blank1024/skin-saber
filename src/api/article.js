@@ -13,7 +13,7 @@ const article = {
         return axios.get(`/article/${id}`);
     },
     getArchive() {
-        return axios.get('/article/archive');
+        return axios.get('/article/archives');
     }
 }
 
