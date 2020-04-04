@@ -3,7 +3,7 @@
  * @Date: 2020-04-04 15:24:37
  * @Author: jawnwa22
  * @LastEditors: jawnwa22
- * @LastEditTime: 2020-04-04 16:21:26
+ * @LastEditTime: 2020-04-04 16:24:01
  -->
 <template lang="pug">
     div.date-filter-page
@@ -45,3 +45,10 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.date-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+</style>
