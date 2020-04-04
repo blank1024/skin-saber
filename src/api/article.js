@@ -14,6 +14,14 @@ const article = {
     },
     getArchive() {
         return axios.get('/article/archives');
+    },
+    getBlogByDate({ year, month, page_num, page_size }) {
+        return axios.get(`/article/archive/${year}/${month}`, {
+            params: {
+                page_num,
+                page_size
+            }
+        });
     }
 }
 
